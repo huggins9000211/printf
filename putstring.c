@@ -22,5 +22,7 @@ int putstring(char *in)
 		_putchar(in[i]);
 		i++;
 	}
+
+	_putchar('\n');
 	return 0;
 }
