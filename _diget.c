@@ -14,7 +14,6 @@ char *_diget(num in)
 		result = in.va;
 		toString = numtostr(result);
 		return (toString);
-		printf("this is d\n");
 	}
 
 	else if (in.flag == 'i')
@@ -23,7 +22,6 @@ char *_diget(num in)
 		result = in.va;
 		toString = numtostr(result);
 		return (toString);
-		printf("this is i\n");
 	}
 
 	else

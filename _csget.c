@@ -18,14 +18,12 @@ char* _csget(str in)
 
 	{
 		return (in.va);
-		printf("this is c\n");
 	}
 
 	else if (in.flag == 's')
 
 	{
 		return (in.va);
-		printf("this is s\n");
 	}
 
 	else

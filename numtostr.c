@@ -42,7 +42,6 @@ char *numtostr(int x)
 			counter++;
 		}
 	}
-	printf("%s\n", result);
 	return (result);
 
 }

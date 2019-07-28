@@ -17,7 +17,6 @@ char *_strcat(char *s1, char *s2)
 	if (_strlen(s1) == 0)
 	{
 
-		printf("Null returned\n");
 		return (s2);
 	}
 
@@ -26,7 +25,6 @@ char *_strcat(char *s1, char *s2)
 	result = malloc(totalLength + 1);
 	if (result == NULL)
 	{
-		printf("Null returned ***\n");
 		return (NULL);
 	}
 
