@@ -11,7 +11,7 @@ int main()
 
 
 
-	_printf("my name is %s i am %i", name, x);
+	_printf("my name is %s%i", name, x);
 	printf("*****my name is %s i am %i", name, x);
 	return 0;
 }
