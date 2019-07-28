@@ -10,25 +10,33 @@
 char *_strcat(char *s1, char *s2)
 {
 	char *result;
-	int totaLength;
+	int totalLength;
 	int i = 0;
 	int counter;
 
+	if (_strlen(s1) == 0)
+	{
 
-	totalLength = _strlen(dest) + _strlen(src);
+		printf("Null returned\n");
+		return (s2);
+	}
+
+	totalLength = _strlen(s1) + _strlen(s2);
+	printf("%d\n", totalLength);
 
 	result = malloc(totalLength + 1);
 	if (result == NULL)
+	{
+		printf("Null returned ***\n");
 		return (NULL);
-
-	if (s1 == NULL)
-		return (s2);
+	}
 
 	while (s1[i] != '\0')
 
 	{
 		result[counter] = s1[i];
 		counter++;
+		i++;
 	}
 
 	i = 0;
@@ -37,8 +45,9 @@ char *_strcat(char *s1, char *s2)
 	{
 		result[counter] = s2[i];
 		counter++;
+		i++;
         }
 
-
+	result[counter] = '\0';
 	return (result);
 }

@@ -1,66 +1,111 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
-#include <malloc.h>
+
 #include "holberton.h"
 
 int _printf(const char *format, ...)
 {
-	char *copy;
+	const char *copy;
 	char *result;
-	char *statemnt;
+	/*char *statemnt;*/
+	char *temp;
 
 
-	int numOrStr;
-	int primary;
+	int strOrNum;
 	int i;
-	int x;
 	int n;
-
-	n = getNumArgs(char *copy);
 	va_list lst;
-	va_start(lst, n);
+
+
+
+	va_start(lst, format);
 
 	i = 0;
-	x = 1;
 	copy = format;
+	n = getNumArgs(copy) + 1;
+	printf("%d\n", n);
 	while (copy[i] != '\0')
 	{
 
-		char *next;
+
 
 		if (copy[i] == '%')
 		{
-			next = (copy + 1);
-			numOrStr = typeChecker(next);
+			const char *next = (copy + 1);
+
+			printf("Test\n");
+
+
+			strOrNum = typeChecker(next);
 
 			if (strOrNum)
 			{
 				if (isPrimary(next))
 				{
-					Struct num in;
+					str in;
+					printf("Test\n");
 					in.va = va_arg(lst, char *);
-					in.mod = next;
+					in.flag = next[0];
 
-					malloc(2);
-					statemnt[0] = copy[i];
-					mod = copy[i + 1]
+					temp = _csget(in);
+					printf("test\n");
+					if (i == 0)
+					{
+						result = temp;
+					}
+					else
+					{
+						result = _strcat(result, temp);
+
+					}
+					printf("%s    <<<<<<<\n", result);
+					putstring(result);
+					printf("\n");
+					i = i + 2;
+
+					printf("%s ***************\n", result);
 				}
 			}
 			else if(strOrNum == 0)
 			{
-				if isPrimary()
+				if (isPrimary(next))
 				{
-					Struct num in;
-					in.va = va_arg(lst, int *);
-					in.mod = next;
+					num in;
+					printf("Test\n");
+					in.va = va_arg(lst, int);
+					in.flag = next[0];
+
+					temp = _diget(in);
+					printf("%d <new len\n", _strlen(temp));
+					if (i == 0)
+					{
+						result = temp;
+					}
+					else
+					{
+						result = _strcat(result, temp);
+
+					}
+					printf("%d <result len\n", _strlen(result));
+					printf("%s    <<<<<<<\n", result);
+					putstring(result);
+					printf("\n");
+					i = i + 2;
+
+					printf("%s ***************\n", result);
 				}
 
 			}
-			else if(srtOrNum == -1)
+			else if(strOrNum == -1)
 			{
 				printf("*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n");
 			}
 		}
+		/*
+		else
+		{
+			result copy[i]
+
+		}
+		*/
 	}
+	return (0);
 }

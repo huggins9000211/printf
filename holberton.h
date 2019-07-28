@@ -1,10 +1,10 @@
 #ifndef GRANDPARENT_H
 #define GRANDPARENT_H
-int _printf(const char *format, ...);
-char *_csget(struct _str in);
-char *_diget(struct _num in);
-int getNumArgs(char *copy);
-int typeChecker(char *type);
+#include <stdio.h>
+#include <malloc.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <unistd.h>
 /**
  * struct op - Struct op
  *
@@ -14,13 +14,25 @@ int typeChecker(char *type);
 typedef struct strIn
 {
 	char *va;
-	int (*f)(int a, int b);
-
+	char flag;
 } str;
 typedef struct numIn
 {
-	char *va;
-	char *mod;
+	int va;
+	char flag;
 
 } num;
+int _printf(const char *format, ...);
+int putstring(char *in);
+int _putchar(char c);
+char *_csget(str in);
+char *_diget(num in);
+int getNumArgs(const char *copy);
+char *_strcat(char *s1, char *s2);
+int intlen(int x);
+int typeChecker(const char *type);
+int _strlen(char *s);
+int isPrimary(const char *type);
+char *numtostr(int x);
+
 #endif

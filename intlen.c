@@ -4,13 +4,11 @@
 #include <stdarg.h>
 #include <malloc.h>
 
-int intlen(int x);
+int intlen(int x)
 {
-	int current;
 	int copy;
 	int counter;
 	copy = x;
-	current = 1;
 	counter = 0;
 	while (copy != 0)
 	{
