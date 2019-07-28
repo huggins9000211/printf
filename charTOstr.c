@@ -5,8 +5,14 @@ char *charTOstr(char result)
 {
 
 
-	char string[2] = "\0";
+	char *string;
+	string = malloc(2);
+	if (string == NULL)
+	{
+		printf("*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n");
+	}
 	string[0] = result;
+	string[1] = '\0';
 
 	return (string);
 }

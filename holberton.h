@@ -29,10 +29,11 @@ char *_csget(str in);
 char *_diget(num in);
 int getNumArgs(const char *copy);
 char *_strcat(char *s1, char *s2);
+char *charTOstr(char result);
 int intlen(int x);
-int typeChecker(const char *type);
+int typeChecker(char type);
 int _strlen(char *s);
-int isPrimary(const char *type);
+int isPrimary(char type);
 char *numtostr(int x);
 
 #endif

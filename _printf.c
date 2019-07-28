@@ -11,7 +11,6 @@ int _printf(const char *format, ...)
 
 	int strOrNum;
 	int i;
-	int n;
 	va_list lst;
 
 
@@ -20,8 +19,9 @@ int _printf(const char *format, ...)
 
 	i = 0;
 	copy = format;
+	/*
 	n = getNumArgs(copy) + 1;
-	printf("%d\n", n);
+	*/
 	while (copy[i] != '\0')
 	{
 
@@ -29,9 +29,8 @@ int _printf(const char *format, ...)
 
 		if (copy[i] == '%')
 		{
-			const char *next = (copy + 1);
+			char next = copy[i + 1];
 
-			printf("Test\n");
 
 
 			strOrNum = typeChecker(next);
@@ -41,12 +40,10 @@ int _printf(const char *format, ...)
 				if (isPrimary(next))
 				{
 					str in;
-					printf("Test\n");
 					in.va = va_arg(lst, char *);
-					in.flag = next[0];
+					in.flag = next;
 
 					temp = _csget(in);
-					printf("test\n");
 					if (i == 0)
 					{
 						result = temp;
@@ -56,12 +53,8 @@ int _printf(const char *format, ...)
 						result = _strcat(result, temp);
 
 					}
-					printf("%s    <<<<<<<\n", result);
-					putstring(result);
-					printf("\n");
 					i = i + 2;
 
-					printf("%s ***************\n", result);
 				}
 			}
 			else if(strOrNum == 0)
@@ -69,43 +62,51 @@ int _printf(const char *format, ...)
 				if (isPrimary(next))
 				{
 					num in;
-					printf("Test\n");
 					in.va = va_arg(lst, int);
-					in.flag = next[0];
+					in.flag = next;
 
 					temp = _diget(in);
-					printf("%d <new len\n", _strlen(temp));
 					if (i == 0)
 					{
-						result = temp;
+		/* condition */				result = temp;
 					}
 					else
 					{
 						result = _strcat(result, temp);
 
 					}
-					printf("%d <result len\n", _strlen(result));
-					printf("%s    <<<<<<<\n", result);
-					putstring(result);
-					printf("\n");
 					i = i + 2;
 
-					printf("%s ***************\n", result);
 				}
 
 			}
 			else if(strOrNum == -1)
 			{
-				printf("*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n");
+				return (0);
 			}
 		}
-		/*
+
 		else
 		{
-			result copy[i]
+			if (i == 0)
+			{
+				temp = charTOstr(copy[i]);
+				result = temp;
+				i++;
+			}
+			else
+			{
+
+				temp = charTOstr(copy[i]);
+				result = _strcat(result, temp);
+
+				i++;
+			}
+
+
 
 		}
-		*/
 	}
+	putstring(result);
 	return (0);
 }

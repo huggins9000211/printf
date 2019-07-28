@@ -12,7 +12,7 @@ char *_strcat(char *s1, char *s2)
 	char *result;
 	int totalLength;
 	int i = 0;
-	int counter;
+	int counter = 0;
 
 	if (_strlen(s1) == 0)
 	{
@@ -22,7 +22,6 @@ char *_strcat(char *s1, char *s2)
 	}
 
 	totalLength = _strlen(s1) + _strlen(s2);
-	printf("%d\n", totalLength);
 
 	result = malloc(totalLength + 1);
 	if (result == NULL)
@@ -32,13 +31,11 @@ char *_strcat(char *s1, char *s2)
 	}
 
 	while (s1[i] != '\0')
-
 	{
 		result[counter] = s1[i];
 		counter++;
 		i++;
 	}
-
 	i = 0;
 	while (s2[i] != '\0')
 

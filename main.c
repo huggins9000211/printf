@@ -5,11 +5,13 @@ int main()
 {
 
 	char *name = "anthony";
+	int x;
+
+	x = (-21);
 
 
 
-	int x = 6;
-	_printf("%s", name);
-	_printf("%d", x);
+	_printf("my name is %s i am %i", name, x);
+	printf("*****my name is %s i am %i", name, x);
 	return 0;
 }

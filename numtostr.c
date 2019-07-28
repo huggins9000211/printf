@@ -9,21 +9,40 @@ char *numtostr(int x)
 	int copy;
 	int counter;
 
-
-
 	len = intlen(x);
-	result = malloc(4 * len);
-	copy = x;
-	current = 1;
-	counter = 1;
-	while (counter <= len)
+	if (x < 0)
 	{
-		current = (copy % 10);
-		currentChar = (current + '0');
-		result[len - counter] = currentChar;
-		copy = (copy / 10);
-		counter ++;
+		result = malloc(len + 2);
+		result[0] = '-';
+		result[len + 2] = '\0';
+		copy = (x * -1);
+		counter = 0;
+		while (counter < len)
+		{
+			current = (copy % 10);
+			currentChar = (current + '0');
+			result[len - counter] = currentChar;
+			copy = (copy / 10);
+			counter++;
+		}
+
 	}
+	else
+	{
+		result = malloc(len + 1);
+		result[len + 1] = '\0';
+		copy = x;
+		counter = 1;
+		while (counter <= len)
+		{
+			current = (copy % 10);
+			currentChar = (current + '0');
+			result[len - counter] = currentChar;
+			copy = (copy / 10);
+			counter++;
+		}
+	}
+	printf("%s\n", result);
 	return (result);
 
 }

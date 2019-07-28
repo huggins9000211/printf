@@ -1,14 +1,14 @@
 #include "holberton.h"
 
-int typeChecker(const char *type)
+int typeChecker(char next)
 {
 /* return 0 if its a number */
 /* return 1 if tis a string */
 
-	if (type[0] == 'c' || type[0] == 's')
+	if ((next == 'c') || (next == 's'))
 		return (1);
 
-	else if (type[0] == 'd' || type[0] == 'i')
+	else if ((next == 'd') || (next == 'i'))
 		return (0);
 
 	else

@@ -1,18 +1,18 @@
 #include "holberton.h"
 
-int isPrimary(const char *type)
+int isPrimary(char type)
 {
 
-	if (type[0] == 'c')
+	if (type == 'c')
 		return (1);
 
-	else if (type[0] == 's')
+	else if (type == 's')
 		return (1);
 
-	else if (type[0] == 'd')
+	else if (type == 'd')
 		return (1);
 
-	else if (type[0] == 'i')
+	else if (type == 'i')
 		return (1);
 
 	else
