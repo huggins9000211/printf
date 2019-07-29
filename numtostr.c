@@ -8,6 +8,11 @@ char *numtostr(int x)
 	int len;
 	int copy;
 	int counter;
+	if (x == (-2147483648))
+	{
+		result = "-2147483648";
+		return (result);
+	}
 
 	len = intlen(x);
 	if (x < 0)

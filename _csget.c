@@ -2,6 +2,7 @@
 
 char* _csget(str in)
 {
+	char *nulls;
 	/*
 	This can have length > 1
 
@@ -11,19 +12,26 @@ char* _csget(str in)
 
 
 	*/
+	nulls = "(null)";
 
 
 
 	if (in.flag == 'c')
 
 	{
-		return (in.va);
+		if (in.va)
+			return (in.va);
+		else
+			return (nulls);
 	}
 
 	else if (in.flag == 's')
 
 	{
-		return (in.va);
+		if (in.va)
+			return (in.va);
+		else
+			return (nulls);
 	}
 
 	else
