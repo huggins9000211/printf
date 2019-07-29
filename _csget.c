@@ -1,6 +1,6 @@
 #include "holberton.h"
 
-char* _csget(str in)
+char *_csget(str in)
 {
 	/*
 	This can have length > 1
