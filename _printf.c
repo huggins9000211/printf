@@ -40,8 +40,16 @@ int _printf(const char *format, ...)
 				if (isPrimary(next))
 				{
 					str in;
-					in.va = va_arg(lst, char *);
+
 					in.flag = next;
+					if (in.flag == 'c')
+					{
+						in.c = (char)(va_arg(lst, int));
+					}
+					else if (in.flag == 's')
+					{
+						in.va = va_arg(lst, char *);
+					}
 
 					temp = _csget(in);
 					if (i == 0)
@@ -64,6 +72,7 @@ int _printf(const char *format, ...)
 					num in;
 					in.va = va_arg(lst, int);
 					in.flag = next;
+
 
 					temp = _diget(in);
 					if (i == 0)

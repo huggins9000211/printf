@@ -17,10 +17,9 @@ char* _csget(str in)
 
 
 	if (in.flag == 'c')
-
 	{
-		if (in.va)
-			return (in.va);
+		if (in.c)
+			return charTOstr(in.c);
 		else
 			return (nulls);
 	}

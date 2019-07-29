@@ -13,6 +13,7 @@
 typedef struct strIn
 {
 	char *va;
+	char c;
 	char flag;
 } str;
 typedef struct numIn
