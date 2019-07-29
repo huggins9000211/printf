@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 
 			strOrNum = typeChecker(next);
 
-			if (strOrNum)
+			if (strOrNum == 1)
 			{
 				if (isPrimary(next))
 				{
@@ -68,7 +68,7 @@ int _printf(const char *format, ...)
 					temp = _diget(in);
 					if (i == 0)
 					{
-		/* condition */				result = temp;
+		/* condition */			result = temp;
 					}
 					else
 					{
@@ -79,6 +79,20 @@ int _printf(const char *format, ...)
 
 				}
 
+			}
+			else if(strOrNum == 2)
+			{
+				temp = charTOstr('%');
+				if (i == 0)
+				{
+					result = temp;
+					i = i + 2;
+				}
+				else
+				{
+					result = _strcat(result, temp);
+					i = i + 2;
+				}
 			}
 			else if(strOrNum == -1)
 			{

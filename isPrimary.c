@@ -15,6 +15,9 @@ int isPrimary(char type)
 	else if (type == 'i')
 		return (1);
 
+	else if (type == '%')
+		return (2);
+
 	else
 		return (0);
 }
