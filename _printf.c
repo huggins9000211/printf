@@ -108,5 +108,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	putstring(result);
-	return (0);
+	return (_strlen(result));
 }
