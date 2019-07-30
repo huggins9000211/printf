@@ -1,7 +1,9 @@
 #include "holbeton.h"
 
-int *handleNUM(int next)
+int *handleNUM(int i, char next, char *result)
 {
+	char *temp;
+
 	num in;
 	in.va = va_arg(lst, int);
 	in.flag = next;
@@ -22,4 +24,6 @@ int *handleNUM(int next)
 
 	i = i + 2;
 
+
+	return (i);
 }

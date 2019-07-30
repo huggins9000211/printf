@@ -1,7 +1,10 @@
 #include "holberton.h"
 
-char *handleSTR(char next)
+char *handleSTR(int i, char next, char *result)
 {
+	char *temp;
+
+
 	str in;
 
 	in.flag = next;
@@ -33,4 +36,5 @@ char *handleSTR(char next)
 
 	i = i + 2;
 
+	return (i);
 }
