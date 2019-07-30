@@ -24,8 +24,6 @@ char *toBase8(int x)
 
 	/* printf("*%d*", len); TO TEST */
 	result = malloc(len + 1);
-		if (result == NULL)
-			printf("test*****test");
 	while (x != 0)
 
 	{

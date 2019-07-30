@@ -23,7 +23,6 @@ char *toBase2(int x)
 
         /* printf("*%d*", len); TO TEST */
         result = malloc(len + 1);
-                if (result == NULL)
         while (x != 0)
 
 	{
