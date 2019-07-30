@@ -33,7 +33,7 @@ If an output error is encountered, a negative value is returned.
 .fi
 .in
 .PP
-To print a date and time in the form "sunday, July 3, 10:02" where
+To print a date and time in the form "Sunday, July 3rd, 10:02" where
 .I month
 are pointers to strings:
 .in +4n
