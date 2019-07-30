@@ -3,7 +3,10 @@
 .B _printf
 - print format string
 .SH SYNOPSIS
-_printf FORMAT [ARGUMENT]...
+_printf 
+.I FORMAT
+[ARGUMENT]...
+.br
 _printf OPTION
 .SH DESCRIPTION
 Print ARGUMENT(s) according to FORMAT, or execute according to OPTION:
@@ -26,9 +29,24 @@ option to print out percentage symbol
 .SS Return value
 Upon successful return, this function returns the number of characters printed (excluding the null byte used to end output to strings).
 If an output error is encountered, a negative value is returned.
+.SH EXMAPLE
+.fi
+.in
+.PP
+To print a date and time in the form "sunday, July 3, 10:02" where
+.I month
+are pointers to strings:
+.in +4n
+.nf
+#include "holberton.h"
+printf("%s, %d, %d, %.2d:%.2d\en", weekday, month, day, hour, min);
+
+
 .SH REPORTING BUGS
-Report printf bugs to 725@holbertonschool.com
+Report printf bugs to: <725@holbertonschool.com>
+.br
 GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
+.br
 General help using GNU software: <http://www.gnu.org/gethelp/>
 
 .SH SEE ALSO
