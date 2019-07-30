@@ -29,6 +29,7 @@ char *_csget(str in);
 char *toBase2(int x);
 char *toBase8(int x);
 char *toBase16(int x);
+char *toBase16lower(int x);
 char *_diget(num in);
 int getNumArgs(const char *copy);
 char *_strcat(char *s1, char *s2);

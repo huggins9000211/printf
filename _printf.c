@@ -1,4 +1,3 @@
-
 #include "holberton.h"
 
 int _printf(const char *format, ...)
@@ -172,7 +171,42 @@ int _printf(const char *format, ...)
 						}
 					}
 				}
-				else if (next == 'u')
+
+                                else if (next == 'x')
+                                {
+                                        temp = toBase16lower(x);
+                                        if (i == 0)
+                                        {
+                                                if (x == 0)
+                                                {
+                                                        temp = "0";
+                                                        result = _strcat(result, "0");
+                                                        i = i + 2;
+                                                }
+                                                else
+                                                {
+                                                        result = temp;
+                                                        i = i + 2;
+                                                }
+
+                                        }
+                                        else
+                                        {
+                                                if (x == 0)
+                                                {
+                                                        result = _strcat(result, "0");
+                                                        i = i + 2;
+                                                }
+                                                else
+                                                {
+                                                        result = _strcat(result, temp);
+                                                        i = i + 2;
+                                                }
+                                        }
+                                }
+
+
+				else if (next == 'X')
 				{
 					temp = toBase16(x);
 					if (i == 0)
