@@ -104,7 +104,7 @@ int _printf(const char *format, ...)
 					i = i + 2;
 				}
 			}
-			
+
 			else if(strOrNum == 3)
 			{
 				x = va_arg(lst, int);
