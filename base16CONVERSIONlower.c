@@ -49,14 +49,14 @@ char *toBase16lower(int x)
 
 		{
 
-			if (x == 10)
+			if (i == 10)
 
 			{	c =  'a';
                         	result[len - count] = c;
                         	count++;
 			}
 
-			else if (x == 11)
+			else if (i == 11)
 
 			{
 				c =  'b';
@@ -64,7 +64,7 @@ char *toBase16lower(int x)
                         	count++;
 			}
 
-			else if (x == 12)
+			else if (i == 12)
 
 			{
 				c =  'c';
@@ -72,7 +72,7 @@ char *toBase16lower(int x)
                         	count++;
 			}
 
-			else if (x == 13)
+			else if (i == 13)
 
 			{
 				c =  'e';
@@ -80,7 +80,7 @@ char *toBase16lower(int x)
                         	count++;
 			}
 
-			else if (x == 14)
+			else if (i == 14)
 
 			{
 				c =  'f';
@@ -96,4 +96,3 @@ char *toBase16lower(int x)
 	result[len + 1] = '\0';
 	return (result);
 }
-

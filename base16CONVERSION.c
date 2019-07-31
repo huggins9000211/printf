@@ -10,7 +10,7 @@ char *toBase16(int x)
 	int i;
 	int len;
 	int copy = x;
-	int c;
+	char c;
 
 	count = 1;
 	len = 0;
@@ -36,7 +36,6 @@ char *toBase16(int x)
 		i = temp % 16;
 
 		if ( i < 10)
-
 		{
 			c = i + '0';
 			/* printf("%d\n", i); TO TEST */
@@ -46,42 +45,32 @@ char *toBase16(int x)
 		}
 
 		else
-
 		{
 
-			if (x == 10)
-
+			if (i == 10)
 			{	c =  'A';
                         	result[len - count] = c;
                         	count++;
 			}
-
-			else if (x == 11)
-
+			else if (i == 11)
 			{
 				c =  'B';
                         	result[len - count] = c;
                         	count++;
 			}
-
-			else if (x == 12)
-
+			else if (i == 12)
 			{
 				c =  'C';
                         	result[len - count] = c;
                         	count++;
 			}
-
-			else if (x == 13)
-
+			else if (i == 13)
 			{
 				c =  'E';
                         	result[len - count] = c;
                         	count++;
 			}
-
-			else if (x == 14)
-
+			else if (i == 14)
 			{
 				c =  'F';
                         	result[len - count] = c;
@@ -92,8 +81,6 @@ char *toBase16(int x)
 	}
 
 
-	/* printf("*%s*", result); TO TEST */
-	result[len + 1] = '\0';
+ 		result[len + 1] = '\0';
 	return (result);
 }
-
