@@ -26,3 +26,9 @@ printf(format);
 	<br> It can optionally contains format placeholder specifiers (eg: %s, %d, and %i) that will replaced by the value specified in additional arguments. </li> 
 	<li> Return: return length of the buffer. if error, return -1 </li>
 </ul>
+
+
+<h3> Coding Style </h3>
+
+<strong> All C files are compiled on Ubuntu 14.04 LTS and using Betty Style for checking coding and documentation styles. </strong>
+
