@@ -10,12 +10,19 @@
 
 <p> The function prototype we used consists of two paramaters: "_printf(const char *format, ...)" Here we are formatting a string that takes specific flags according to its flag... Wel get a little deeper into that later on" <p>
 
-&ltstrong&gt #include "holberton.h"
+<strong> #include "holberton.h"
 
 int printf(const char *format, ...);
-int index = 0;
-if (format[index] == %)
-{
-	printf(format);
-}
-return(index); &lt/strong&gt
+<br> int index = 0;
+<br> if (format[index] == %)
+<br> {
+<p>         printf(format); </p>
+<br> }
+<br> return(index); </strong>
+
+
+<ul>
+	<li> Format: A string that contains the text to be written to stdout. 
+	<br> It can optionally contains format placeholder specifiers (eg: %s, %d, and %i) that will replaced by the value specified in additional arguments. </li> 
+	<li> Return: return length of the buffer. if error, return -1 </li>
+</ul>
