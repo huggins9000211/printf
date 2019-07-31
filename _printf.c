@@ -41,26 +41,18 @@ int _printf(const char *format, ...)
 				{
 					str in;
 
-					if (next == 'c')
+					in.flag = next;
+					if (in.flag == 'c')
 					{
-						in.flag = next;
 						in.c = (char)(va_arg(lst, int));
 					}
-					else if (next == 's')
+					else if (in.flag == 's')
 					{
-						in.flag = next;
 						in.va = va_arg(lst, char *);
 					}
-					/*
-					else if (next == 'S')
-					{
-						in.flag = next;
-						in.va = va_arg(lst, char *);
-					}
-					*/
+
 
 					temp = _csget(in);
-					printf("%sTest<<<<<<<<\n", temp);
 					if (i == 0)
 					{
 						result = temp;
