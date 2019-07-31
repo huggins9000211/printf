@@ -32,3 +32,9 @@ printf(format);
 
 <strong> All C files are compiled on Ubuntu 14.04 LTS and using Betty Style for checking coding and documentation styles. </strong>
 
+<h3> Authors </h3> 
+
+<ul>
+	<li> Anthony Huggins </li>
+	<li> Diego Tardio </li>
+<ul>
