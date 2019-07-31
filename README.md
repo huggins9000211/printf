@@ -16,11 +16,11 @@ int printf(const char *format, ...);
 <br> int index = 0;
 <br> if (format[index] == %)
 <br> {
-<p>         printf(format); </p>
+printf(format);
 <br> }
 <br> return(index); </strong>
 
-
+<h3> Inputs of printf </h3>
 <ul>
 	<li> Format: A string that contains the text to be written to stdout. 
 	<br> It can optionally contains format placeholder specifiers (eg: %s, %d, and %i) that will replaced by the value specified in additional arguments. </li> 
