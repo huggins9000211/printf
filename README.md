@@ -27,6 +27,21 @@ printf(format);
 	<li> Return: return length of the buffer. if error, return -1 </li>
 </ul>
 
+<table style="width:100%">
+  <tr>
+    <th>&s</th>
+    <th>%c</th> 
+    <th>%de</th>
+    <th>%i</th>
+  </tr>
+  <tr>
+    <td>String of characters</td>
+    <td>Single character</td> 
+    <td>Signed decimal integer</td>
+    <td>Signed decimal integer</tf>
+  </tr>
+</table>
+
 
 <h3> Coding Style </h3>
 
