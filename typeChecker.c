@@ -8,9 +8,7 @@ int typeChecker(char next)
 
 
 	if (isIN(next, string))
-	{
 		return (1);
-	}
 	else if (next == '%')
 		return (2);
 	else if (isIN(next, num))

@@ -5,10 +5,6 @@ int isPrimary(char type)
 
 	if (type == 'c')
 		return (1);
-	/*
-	if (type == 'S')
-		return (1);
-*/
 	else if (type == 's')
 		return (1);
 	else if (type == 'd')

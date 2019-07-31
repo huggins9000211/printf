@@ -32,16 +32,6 @@ char* _csget(str in)
 		else
 			return (nulls);
 	}
-	/*
-	else if (in.flag == 'S')
-
-	{
-		if (in.va)
-			return handleS(in.va);
-		else
-			return (nulls);
-	}
-	*/
 	else
 		return (NULL);
 

@@ -10,7 +10,7 @@ char *toBase16lower(int x)
 	int i;
 	int len;
 	int copy = x;
-	int c;
+	char c;
 
 	count = 1;
 	len = 0;
