@@ -42,6 +42,9 @@ printf(format);
   </tr>
 </table>
 
+<h3> Testing </h3>
+<Strong> gcc -Wall -Werror -Wextra -pedantic *.c -o <output filename> </strong>
+<p> This is what we used to comple and test our functions capabilities </p>
 
 <h3> Coding Style </h3>
 
